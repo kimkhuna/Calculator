@@ -23,9 +23,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       
-        //Label Design
-        display.layer.cornerRadius = 50
-        display.layer.masksToBounds = true
+
         
         
     }
@@ -108,8 +106,30 @@ class ViewController: UIViewController {
             isAdd = false
             display.text = String(sum)
         }
+        if isSub{
+            sum = sum - Int(display.text!)!
+            print("result Sub", sum)
+            isSub = false
+            display.text = String(sum)
+        }
+        if isMul{
+            sum = sum * Int(display.text!)!
+            print("result Mul", sum)
+            isMul = false
+            display.text = String(sum)
+        }
+        if isDiv{
+            sum = sum / Int(display.text!)!
+            print("result Div", sum)
+            isDiv = false
+            display.text = String(sum)
+        }
     }
+    }
+        
+
     
     
-}
+    
+
 
